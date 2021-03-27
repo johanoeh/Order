@@ -1,0 +1,23 @@
+
+entity CustomerOrder {
+
+	orderNumber String
+    orderStatus String
+    customerNumber String
+    legalId String
+}
+
+relationship OneToMany {
+	CustomerOrder{orderItem} to OrderItem
+}
+
+entity OrderItem {
+
+	procuctName String
+    productId String
+    amount Integer
+    price String
+    
+}
+
+
