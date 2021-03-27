@@ -1,0 +1,41 @@
+{
+  "name": "CustomerOrder",
+  "fields": [
+    {
+      "fieldName": "orderNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "orderStatus",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "customerNumber",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "legalId",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "orderItem",
+      "otherEntityRelationshipName": "customerOrder",
+      "relationshipName": "orderItem"
+    }
+  ],
+  "changelogDate": "20210327141809",
+  "entityTableName": "customer_order",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "Order",
+  "applications": "*",
+  "microserviceName": "Order"
+}
