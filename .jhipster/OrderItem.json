@@ -1,0 +1,42 @@
+{
+  "name": "OrderItem",
+  "fields": [
+    {
+      "fieldName": "procuctName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "productId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "customerOrder",
+      "otherEntityRelationshipName": "orderItem",
+      "relationshipName": "customerOrder",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210327141909",
+  "entityTableName": "order_item",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "Order",
+  "applications": "*",
+  "microserviceName": "Order"
+}
